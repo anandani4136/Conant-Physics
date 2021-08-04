@@ -4,13 +4,14 @@ const app = express();
 
 var admin = require("firebase-admin");
 
-var serviceAccount = require("backend/conant-physics-firebase-adminsdk-jjp61-b0c37060bb.json");
+var serviceAccount = require("./conant-physics-firebase-adminsdk-jjp61-b0c37060bb.json");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
 })
 
 const db = admin.firestore();
+
 
 
 app.get('/', function(req, res) {
@@ -27,4 +28,4 @@ app.post('/', function(req, res) {
     })
 });
 
-app.listen(3000, ()=> console.log("ConantPhysics listening on port 3000!"));
+app.listen(5000, ()=> console.log("ConantPhysics listening on port 5000!"));
