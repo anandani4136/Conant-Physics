@@ -3,12 +3,26 @@ import "./componentsCSS/LoginPageCSS.css"
 
 export default function LoginPage() {
     return (
-        <div id="loginform">
-            <FormHeader title="Login" />
-            <Form />
+        <div>
+            <br></br>
+            {/*<div>*/}
+            {/*</div>*/}
+            <div id="loginform">
+
+                <LoginLogo/>
+                {/*<FormHeader title="Login" />*/}
+                <Form />
+            </div>
         </div>
     )
 }
+const LoginLogo = props => (
+    <div className="alignRow">
+        <h2 id="loginTitle1">CONANT</h2>
+        <h2 id="loginTitle2">PHYSICS</h2>
+    </div>
+    
+);
 
 const FormHeader = props => (
     <h2 id="headerTitle">{props.title}</h2>
@@ -17,7 +31,7 @@ const FormHeader = props => (
 
 const Form = props => (
     <div>
-        <FormInput description="Username" placeholder="Enter your username" type="text" />
+        <FormInput description="Email" placeholder="Enter your school email" type="text" />
         <FormInput description="Password" placeholder="Enter your password" type="password"/>
         <FormButton title="Log in"/>
     </div>
