@@ -16,6 +16,7 @@ export default function LoginPage() {
         </div>
     )
 }
+
 const LoginLogo = props => (
     <div className="alignRow">
         <h2 id="loginTitle1">CONANT</h2>
@@ -28,12 +29,16 @@ const FormHeader = props => (
     <h2 id="headerTitle">{props.title}</h2>
 );
 
+function checkCredentials() {
+    console.log("Yes")
+}
+
 
 const Form = props => (
     <div>
-        <FormInput description="Email" placeholder="Enter your school email" type="text" />
-        <FormInput description="Password" placeholder="Enter your password" type="password"/>
-        <FormButton title="Log in"/>
+        <FormInput description="Email" placeholder="Enter your School Email" type="text" />
+        <FormInput description="Code" placeholder="Enter the Code" type="password"/>
+        <FormButton title="Log in" onClick={checkCredentials}/>
     </div>
 );
 
