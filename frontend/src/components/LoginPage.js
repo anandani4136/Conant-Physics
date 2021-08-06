@@ -1,6 +1,7 @@
 import React from 'react'
 import "./componentsCSS/LoginPageCSS.css"
 import loginInfo from "../static/documents/loginInfo.js"
+import userAuth from '../static/documents/userAuth.js'
 
 // export default function LoginPage() {
 //     return (
@@ -55,12 +56,23 @@ import loginInfo from "../static/documents/loginInfo.js"
 export default class LoginPage extends React.Component {
     constructor(props) {
         super(props);
+        // userAuth.userLoggedIn(false);
+        // const fs = require('fs')
+        // fs.readFile("\frontend\src\static\documents\userLoggedIn.txt", "utf-8", (err, data) => {
+        //     if (err) throw (err);
+        //     console.log(data);
+        // })
+        // alert("SDFSDOFISDOFIUSDFOi")
+
+        // userAuth.value = false;
+
         this.state = {
             email: "",
             password: "",
         }
     }
 
+    
 
     setLoginInfo = e => {
         // this.setState({
@@ -85,8 +97,31 @@ export default class LoginPage extends React.Component {
 
         if(!correctInfo) {
             alert("STOP TRYING TO HACK CONANT PHYSICS")
+            window.$signedIn = true;
+
         } else {
-            window.signedIn = true;
+
+            // const fs = require('fs')
+            // let text = "true"
+            // fs.writeFile("userLoggedIn.txt", text, (err) => {
+            //     if (err) throw err;
+            // })
+            // set fso = CreateObject()
+            window.location.href = window.url + "home"
+
+
+            alert("BEFORE SETTING IT TO TRUE AFTER LOGIN IT IS " + userAuth.value)
+            userAuth.value = true;
+            
+            userAuth.userLoggedIn(true)
+            alert("AFTER SETTING IT TO TRUE AFTER LOGIN IT IS " + userAuth.value)
+            Object.freeze(userAuth.value)
+
+            // userAuth = true
+            // window.signedIn = true;
+            // userAuth.getuserAuth()
+            // userAuth.userLoggedIn(true)
+            // userLoggedIn(true);
         }
         //global state logged in thing
     }

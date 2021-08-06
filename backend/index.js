@@ -21,6 +21,18 @@ app.get('/', function(req, res) {
     })
 });
 
+
+app.get('/checkUserLogin', function(req, res) {
+    var fs = require('fs')
+    fs.readFile("../frontend/src/static/documents/userLoggedIn.txt", "utf8", function(err, data) {
+        if (err) throw err;
+        res.json({
+            message:data,
+            success:true,
+        })
+    })
+})
+
 app.post('/', function(req, res) {
     return res.json({
         message: "Welcome :>",
