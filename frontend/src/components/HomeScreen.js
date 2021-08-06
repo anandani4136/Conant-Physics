@@ -1,5 +1,5 @@
 import React from 'react'
-import "./componentsCSS/LoginPageCSS.css"
+import "./componentsCSS/HomeScreenCSS.css"
 
 
 // export default function LoginPage() {
@@ -19,13 +19,14 @@ import "./componentsCSS/LoginPageCSS.css"
     
 // );
 
-class HomeScreen extends React.Component {
+export default class HomeScreen extends React.Component {
     constructor(props) {
         super(props);
         // this.state = {
         //     email: "",
         //     password: "",
         // }
+        alert(window.signedIn)
         if (!window.signedIn) {
             window.location.href = window.url;
         } 

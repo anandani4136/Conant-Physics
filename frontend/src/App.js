@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LoginPage from "./components/LoginPage";
 import HomeScreen from "./components/HomeScreen";
 
-window.signedIn = False
+window.signedIn = false;
 window.url = "http://localhost:3000/"
 
 function App() {
