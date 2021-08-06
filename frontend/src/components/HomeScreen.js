@@ -1,6 +1,6 @@
 import React from 'react'
 import "./componentsCSS/HomeScreenCSS.css"
-
+import userAuth from '../static/documents/userAuth';
 
 // export default function LoginPage() {
 //     return (
@@ -26,10 +26,18 @@ export default class HomeScreen extends React.Component {
         //     email: "",
         //     password: "",
         // }
-        alert(window.signedIn)
-        if (!window.signedIn) {
+        // alert(userAuth)
+        // console.log(userAuth)
+        // alert(userAuth.auth)
+        // if (!window.signedIn) {
+        // console.log(userAuth.userAuth)
+        alert(userAuth.value)
+        
+        if (!userAuth.value)  {   
             window.location.href = window.url;
-        } 
+        } else {
+            alert("WELCOME")
+        }
     }
 
 
