@@ -1,2 +1,0 @@
-students.d211.org
-password
