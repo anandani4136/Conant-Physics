@@ -85,12 +85,8 @@ export default class LoginPage extends React.Component {
 
         if(!correctInfo) {
             alert("STOP TRYING TO HACK CONANT PHYSICS")
-
         } else {
-
-            window.location.href = window.url + "home"
             window.signedIn = true;
-            alert(window.signedIn)
         }
         //global state logged in thing
     }

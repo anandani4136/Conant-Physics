@@ -26,7 +26,6 @@ export default class HomeScreen extends React.Component {
         //     email: "",
         //     password: "",
         // }
-        alert(window.signedIn)
         if (!window.signedIn) {
             window.location.href = window.url;
         } 
