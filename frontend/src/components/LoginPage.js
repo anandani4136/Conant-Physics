@@ -84,7 +84,7 @@ export default class LoginPage extends React.Component {
         }
 
         if(!correctInfo) {
-            alert("STOP TRYING TO HACK CONANT PHYSICS YOU GAY BITCH")
+            alert("STOP TRYING TO HACK CONANT PHYSICS")
         }
         //global state logged in thing
     }
