@@ -46,7 +46,7 @@ export default class HomeScreen extends React.Component {
     render() {
         return (
             <>
-                <Navbar bg="primary" variant="dark">
+                <Navbar className="navBarBlue" variant="dark">
                     <Container>
                     <Navbar.Brand href="/home">
                         <div className="alignRow">
