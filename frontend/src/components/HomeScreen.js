@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "./componentsCSS/HomeScreenCSS.css"
-import userAuth from '../static/documents/userAuth';
+import loginCheck from '../static/documents/userAuth';
 
 // export default function LoginPage() {
 //     return (
@@ -31,9 +31,9 @@ export default class HomeScreen extends React.Component {
         // alert(userAuth.auth)
         // if (!window.signedIn) {
         // console.log(userAuth.userAuth)
-        alert(userAuth.value)
+        // const userInfo = useContext(userLoggedIn);
         
-        if (!userAuth.value)  {   
+        if (!userLoggedIn.loggedIn)  {
             window.location.href = window.url;
         } else {
             alert("WELCOME")

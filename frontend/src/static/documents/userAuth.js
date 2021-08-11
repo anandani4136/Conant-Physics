@@ -1,10 +1,26 @@
-var value;
+// var value;
+//
+// function userLoggedIn(loggedIn) {
+//     console.log(" USER AUTH IS NOW " + loggedIn)
+//     value = loggedIn;
+// }
+//
+// export default {
+//     value: false,
+//     userLoggedIn(loggedIn) {
+//
+//     },
+// }
 
-function userLoggedIn(loggedIn) {
-    console.log(" USER AUTH IS NOW " + loggedIn)
-    value = loggedIn;
-}
+// import {createContext} from "react";
+//
+// const userLoggedIn = createContext(undefined);
+// export default userLoggedIn;
 
-export default {
-    value: true
-}
+const loginCheck = {
+  loggedIn: false,
+};
+
+loginCheck.loggedIn= "Whatever";
+
+export default loginCheck;
