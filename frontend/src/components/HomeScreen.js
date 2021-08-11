@@ -1,25 +1,9 @@
 import React from 'react'
 import "./componentsCSS/HomeScreenCSS.css"
-import "./componentsCSS/navbar.css"
-import userAuth from '../static/documents/userAuth';
+// import "./componentsCSS/navbar.css"
+// import userAuth from '../static/documents/userAuth';
 import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
 
-// export default function LoginPage() {
-//     return (
-//         <div>
-//             <LoginLogo/>
-//             <h1>Home</h1>
-//         </div>
-//     )
-// }
-
-// const LoginLogo = props => (
-//     <div className="alignRow">
-//         <h2 id="loginTitle1">CONANT</h2>
-//         <h2 id="loginTitle2">PHYSICS</h2>
-//     </div>
-    
-// );
 
 export default class HomeScreen extends React.Component {
     constructor(props) {
@@ -35,11 +19,11 @@ export default class HomeScreen extends React.Component {
         // console.log(userAuth.userAuth)
         // alert(userAuth.value)
         
-        if (!userAuth.value)  {   
-            window.location.href = window.url;
-        } else {
-            // alert("WELCOME")
-        }
+        // if (!userAuth.value)  {
+        //     window.location.href = window.url;
+        // } else {
+        //     // alert("WELCOME")
+        // }
     }
 
 
