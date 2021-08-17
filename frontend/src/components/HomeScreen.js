@@ -3,7 +3,6 @@ import "./componentsCSS/HomeScreenCSS.css"
 import NavBar from "./NavBar"
 // import "./componentsCSS/navbar.css"
 // import userAuth from '../static/documents/userAuth';
-import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
 import {BrowserRouter, Route} from "react-router-dom";
 import Switch from "react-bootstrap/Switch";
 
@@ -54,9 +53,13 @@ export default class HomeScreen extends React.Component {
                 {/*    </Nav>*/}
                 {/*    </Container>*/}
                 {/*</Navbar>*/}
-
                 <NavBar/>
-                <h1>HOME</h1>
+                {/*<h1>HOME</h1>*/}
+
+
+
+                <Home/>
+
             </>
         );
     }

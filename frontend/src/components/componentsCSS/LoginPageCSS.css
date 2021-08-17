@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600|Work+Sans:400,500,600,700&display=swap');
 
 body{
+    /*background-color: skyblue;*/
     background: rgb(34,193,195);
     background: linear-gradient(135deg, rgba(163,23,0,1) 0%,     rgba(0,51,102,1) 100%);
-    font-family: "trebuchet";
+
+    font-family: "trebuchet", serif;
     /* height:100; */
 }
 
