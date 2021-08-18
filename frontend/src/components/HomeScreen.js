@@ -8,8 +8,6 @@ import Switch from "react-bootstrap/Switch";
 
 import Home from "./Home";
 import Resources from "./Resources";
-import About from "./About";
-
 
 export default class HomeScreen extends React.Component {
     constructor(props) {

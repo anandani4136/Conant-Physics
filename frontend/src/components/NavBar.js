@@ -47,10 +47,12 @@ export default function TopNavbar() {
                     </div>
                 </Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link className = "color-navlink" href="/about">About</Nav.Link>
                     <Nav.Link className = "color-navlink" href="/resources">Resources</Nav.Link>
                     <NavDropdown id = "color-dropdown" title="Classes" >
-
+                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-C">AP Physics C</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-12">AP Physics C</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-1">AP Physics C</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-C">AP Physics C</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
             </Container>

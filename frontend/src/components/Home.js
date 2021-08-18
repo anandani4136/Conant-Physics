@@ -12,7 +12,13 @@ export default class HomeScreen extends React.Component {
 
     render() {
         return (
-            <h1>home</h1>
+            <div id="homePage">
+                <div id="khush">
+                    <h1>home/about</h1>
+                </div>
+                
+            </div>
+            
         );
     }
 }
