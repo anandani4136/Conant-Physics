@@ -20,12 +20,33 @@ nav {
     overflow: auto;
 }
 
-#pageIntro{
-    background-image: url("conantphysicsteam.png");
+.pagePicture{
+    background-image: url("../../static/images/conantphysicsteam.png");
     /*background: skyblue;*/
+    background-color: rgba(100, 100, 55, 0.7);
     width: 100vw;
-    height: 100vh;
-    background-size: 100% 100%;
+    min-height: 79vh;
+    background-color: khaki;
+    background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
+    position: static;
+    transform: translateY(-90px);
+    z-index: -1;
+}
+
+.pageContent{
+    background-color: khaki;
+    z-index: 2;
+    width: 100vw;
+    height: 79px;
+    position: absolute;
+    text-align: center;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%, -50%)
+
 }

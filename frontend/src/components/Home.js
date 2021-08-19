@@ -12,16 +12,17 @@ export default class HomeScreen extends React.Component {
     }
 
 
-
-
     render() {
         return (
             <div id="homePage">
                 {/*<div>*/}
                 {/*    <img src={physicsTeam} className="physTeamImg" alt = "Conant physics team"/>*/}
                 {/* </div>*/}
-                <div className="pageIntro">
-                    <h2>HOME</h2>
+                <div className="pagePicture">
+                    <div class="centered">KHUSH</div>
+                </div>
+                <div className="pageContent">
+                    
                 </div>
             </div>
             
