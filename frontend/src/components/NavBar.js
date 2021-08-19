@@ -50,9 +50,9 @@ export default function TopNavbar() {
                     <Nav.Link className = "color-navlink" href="/resources">Resources</Nav.Link>
                     <NavDropdown id = "color-dropdown" title="Classes" >
                         <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-C">AP Physics C</NavDropdown.Item>
-                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-12">AP Physics C</NavDropdown.Item>
-                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-1">AP Physics C</NavDropdown.Item>
-                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-C">AP Physics C</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-12">AP Physics 1 & 2</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-1">AP Physics 1</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/Advanced-Physics">Advanced Physics</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
             </Container>

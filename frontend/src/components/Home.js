@@ -2,6 +2,8 @@ import React from 'react'
 import "./componentsCSS/HomeScreenCSS.css"
 // import "./componentsCSS/navbar.css"
 // import userAuth from '../static/documents/userAuth';
+import physicsTeam from "../static/images/conantphysicsteam.png";
+import teacher from "../static/images/flower-frame.png";
 
 export default class HomeScreen extends React.Component {
     constructor(props) {
@@ -10,13 +12,14 @@ export default class HomeScreen extends React.Component {
     }
 
 
+
+
     render() {
         return (
             <div id="homePage">
-                <div id="khush">
-                    <h1>home/about</h1>
-                </div>
-                
+                <div>
+                    <img src={physicsTeam} classname="homeImg" alt = "Conant physics team"/>
+                 </div>
             </div>
             
         );
