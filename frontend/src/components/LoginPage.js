@@ -92,7 +92,7 @@ export default class LoginPage extends React.Component {
 
 
         return (
-        <div id="loginPage">
+        <div id="loginPage" >
             <br/>
             {/*<div>*/}
             {/*</div>*/}

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./componentsCSS/HomeScreenCSS.css"
+import "./componentsCSS/Home.css"
 // import "./componentsCSS/navbar.css"
 // import userAuth from '../static/documents/userAuth';
 import physicsTeam from "../static/images/conantphysicsteam.png";
@@ -17,9 +17,12 @@ export default class HomeScreen extends React.Component {
     render() {
         return (
             <div id="homePage">
-                <div>
-                    <img src={physicsTeam} classname="homeImg" alt = "Conant physics team"/>
-                 </div>
+                {/*<div>*/}
+                {/*    <img src={physicsTeam} className="physTeamImg" alt = "Conant physics team"/>*/}
+                {/* </div>*/}
+                <div className="pageIntro">
+                    <h2>HOME</h2>
+                </div>
             </div>
             
         );

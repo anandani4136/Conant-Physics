@@ -2,7 +2,10 @@
 body{
     /* background: rgb(34,193,195);
     background: linear-gradient(135deg, rgba(163,23,0,1) 0%,     rgba(0,51,102,1) 100%); */
-    /* ; */
+    /*background:whitesmoke;*/
+
+    /*background:whitesmoke;*/
+
     font-family: "trebuchet";
     /* height:100; */
 }
@@ -11,7 +14,6 @@ html{
     font-size: 100%;
     height: 100%;
     width: 100%;
-    background:whitesmoke
 }
 
 
@@ -23,20 +25,12 @@ html{
     padding: 3px 14px;
 }
 
-#image{
-    size: 70vhc;
-}
 
-#homePage{
-    /* background: whitesmoke; */
-    height: 100%;
-}
+/*#homePage{*/
+/*    !* background: whitesmoke; *!*/
+/*    height: 100%;*/
+/*}*/
 
-.homeImg{
-    max-width:100%;
-    height:auto;
-    object-fit: contain;
-}
 
 .color-nav {
     background-color: white !important;

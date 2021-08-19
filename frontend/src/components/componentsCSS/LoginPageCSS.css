@@ -2,8 +2,8 @@
 
 body{
     /* background-color: skyblue; */
-    /* background: rgb(34,193,195);
-    background: linear-gradient(135deg, rgba(163,23,0,1) 0%,     rgba(0,51,102,1) 100%); */
+    /*background: rgb(34,193,195);*/
+    /*background: linear-gradient(135deg, rgba(163,23,0,1) 0%,     rgba(0,51,102,1) 100%);*/
 
     font-family: "trebuchet", serif;
     height:100%;
@@ -11,6 +11,7 @@ body{
 
 html{
     font-size: 100%;
+    /*background:whitesmoke;*/
     height: 100%;
     width: 100%;
 }
@@ -26,13 +27,13 @@ html{
     border-radius: 25px;
 }
 
-#loginPage{
-    background: rgb(34,193,195);
-    background: linear-gradient(135deg, rgba(163,23,0,1) 0%,     rgba(0,51,102,1) 100%);
-    /* height: 100%; */
-    height:inherit;
-    margin: 0;
-}
+/*#loginPage{*/
+/*    background: rgb(34,193,195);*/
+/*    background: linear-gradient(135deg, rgba(163,23,0,1) 0%,     rgba(0,51,102,1) 100%);*/
+/*    !* height: 100%; *!*/
+/*    height:inherit;*/
+/*    margin: 0;*/
+/*}*/
 
 #loginTitle1{
     /* text-align: center; */
