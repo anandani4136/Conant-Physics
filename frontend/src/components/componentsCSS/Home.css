@@ -23,22 +23,23 @@ nav {
 .pagePicture{
     background-image: url("../../static/images/conantphysicsteam.png");
     /*background: skyblue;*/
-    background-color: rgba(100, 100, 55, 0.7);
     width: 100vw;
-    min-height: 79vh;
+    min-height: 69vh;
     background-color: khaki;
     background-size: cover;
+    /* object-fit: cover; */
     background-repeat: no-repeat;
-    position: static;
+    position: absolute;
     transform: translateY(-90px);
     z-index: -1;
 }
 
 .pageContent{
-    background-color: khaki;
+    background-color: rgba(82, 107, 208, 0.577);
     z-index: 2;
     width: 100vw;
-    height: 79px;
+    height: 69vh;
+    transform: translateY(-90px);
     position: absolute;
     text-align: center;
 }
@@ -47,6 +48,62 @@ nav {
     position: absolute;
     top: 50%;
     left:50%;
-    transform:translate(-50%, -50%)
+    transform:translate(-50%, -50%);
+    font-size: 80px;
+    color: ivory;
+    white-space: nowrap;
 
+}
+
+.centered2{
+    position: absolute;
+    top: 60%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size: 40px;
+    color: ivory;
+    white-space: nowrap;
+}
+
+.pageTop{
+    flex-flow: column;
+    height: 59vh;
+}
+
+.homePage{
+    display:flex;
+}
+
+.infoDiv{
+    display: flex;
+    position: relative;
+
+}
+
+.infoBox{
+    position: relative;
+    width: 44%;
+    min-height: 44%;
+    text-align: center;
+    margin: 3%;
+    -moz-box-shadow: 3px 3px 3px #ccc;
+    -webkit-box-shadow: 3px 3px 3px #ccc;
+    box-shadow: 0px 1px 5px #ccc;
+}
+
+.infoTitle{
+    font-size: 25px;
+    font-weight: bold;
+}
+.infoText{
+    font-size: 20px;
+    margin: 35px;
+}
+
+
+.teacherImg{
+    background-image: url("../../static/images/flower-frame.png");
+    width: 130px;
+    height: 130px;
+    background-size: cover;
 }
