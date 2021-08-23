@@ -15,7 +15,9 @@ const db = admin.firestore();
 
 
 app.get('/', function(req, res) {
+    const data = db.get().collection("home");
     return res.json({
+        data: data,
         message: "Hello there :)",
         success:true
     })
@@ -28,5 +30,13 @@ app.post('/', function(req, res) {
         success: true
     })
 });
+
+app.get('/homepageData', function(req, res) {
+    const data = db.collection("home")
+    return res.json({
+        success: true,
+        message: data,
+    })
+})
 
 app.listen(5000, ()=> console.log("ConantPhysics listening on port 5000!"));
