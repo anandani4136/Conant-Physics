@@ -39,7 +39,7 @@ export default function TopNavbar() {
         //     </Navbar.Collapse>
         // </Navbar>
         <Navbar className="navBarBlue" variant="dark">
-            <Container>
+            <Container id="navBarContainer">
                 <Navbar.Brand href="/home">
                     <div className="alignRow">
                         <h2 id="loginTitle3">CONANT</h2>
@@ -50,9 +50,11 @@ export default function TopNavbar() {
                     <Nav.Link className = "color-navlink" href="/resources">Resources</Nav.Link>
                     <NavDropdown id = "color-dropdown" title="Classes" >
                         <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-C">AP Physics C</NavDropdown.Item>
-                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-12">AP Physics 1 & 2</NavDropdown.Item>
-                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/AP-Physics-1">AP Physics 1</NavDropdown.Item>
-                        <NavDropdown.Item id="color-dropdown1" key="DAb" href="/Advanced-Physics">Advanced Physics</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb1" href="/AP-Physics-12">AP Physics 1 & 2</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb2" href="/AP-Physics-1">AP Physics 1</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb3" href="/Advanced-Physics">Advanced Physics</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb4" href="/Advanced-Physics">Physical Science</NavDropdown.Item>
+                        <NavDropdown.Item id="color-dropdown1" key="DAb5" href="/Advanced-Physics">Physics</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
             </Container>
