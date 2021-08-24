@@ -32,8 +32,11 @@ app.post('/', function(req, res) {
     })
 });
 
-app.get('/homepageData', function(req, res) {
-    const data = db.collection("home")
+app.get('/homepageData', async function (req, res) {
+    const homeRef = db.collection('home');
+
+    const data = await homeRef.get();
+    console.log(data)
     return res.json({
         success: true,
         message: data,
