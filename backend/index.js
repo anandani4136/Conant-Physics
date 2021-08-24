@@ -15,12 +15,13 @@ const db = admin.firestore();
 
 
 app.get('/', function(req, res) {
-    const data = db.get().collection("home");
+    const data = db.collection("home");
     return res.json({
         data: data,
         message: "Hello there :)",
         success:true
     })
+    // return db.collection('home')
 });
 
 
