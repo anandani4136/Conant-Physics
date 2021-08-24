@@ -15,9 +15,9 @@ const db = admin.firestore();
 
 
 app.get('/', function(req, res) {
-    const data = db.collection("home");
+
     return res.json({
-        data: data,
+        // data: data,
         message: "Hello there :)",
         success:true
     })
