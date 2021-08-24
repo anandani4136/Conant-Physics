@@ -42,7 +42,7 @@ export default class HomeScreen extends React.Component {
                                     <MDBRow className="text-md-left">
                                         <MDBCol lg="15" md="15" className="mb-1">
                                             <div className="infoDiv">
-                                                <MDBCol md="2" lg="3" className="float-left">
+                                                <MDBCol md="2" lg="5" className="float-left">
                                                     <div className="teacherImg"></div>
                                                 {/* <MDBAvatar
                                                     src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
@@ -54,11 +54,10 @@ export default class HomeScreen extends React.Component {
                                                 <MDBCol md="20" lg="10" className="float-right">
                                                     <h4 className="font-weight-bold mb-3">Chris Bruce</h4>
                                                     <h6 className="font-weight-bold grey-text mb-3">
-                                                        Web Designer
+                                                        <a href="mailto:cbruce@d211.org">Email</a> | 224-653-3403
                                                     </h6>
                                                     <p className="grey-text">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-                                                        eos id officiis hic tenetur.
+                                                        Hello! I teach AP Physics C and Physics!
                                                     </p>
                                                     <a href="#!" className="p-2 fa-lg fb-ic">
                                                         <MDBIcon fab icon="facebook-f" />
@@ -75,7 +74,7 @@ export default class HomeScreen extends React.Component {
 
                                         <MDBCol lg="15" md="15" className="mb-1">
                                             <div className="infoDiv">
-                                                <MDBCol md="2" lg="3" className="float-left">
+                                                <MDBCol md="2" lg="5" className="float-left">
                                                     <div className="teacherImg"></div>
                                                 {/* <MDBAvatar
                                                     src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
@@ -87,11 +86,10 @@ export default class HomeScreen extends React.Component {
                                                 <MDBCol md="20" lg="10" className="float-right">
                                                     <h4 className="font-weight-bold mb-3">Caleb Cochrum</h4>
                                                     <h6 className="font-weight-bold grey-text mb-3">
-                                                        Web Designer
+                                                        <a href="mailto:ccochrum@d211.org">Email</a> | 224-653-3402
                                                     </h6>
                                                     <p className="grey-text">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-                                                        eos id officiis hic tenetur.
+                                                        Hello! I teach AP Physics 1 & 2, Physical Science, and Physics!
                                                     </p>
                                                     <a href="#!" className="p-2 fa-lg fb-ic">
                                                         <MDBIcon fab icon="facebook-f" />
@@ -108,7 +106,7 @@ export default class HomeScreen extends React.Component {
 
                                         <MDBCol lg="15" md="15" className="mb-1">
                                             <div className="infoDiv">
-                                                <MDBCol md="2" lg="3" className="float-left">
+                                                <MDBCol md="2" lg="5" className="float-left">
                                                     <div className="teacherImg"></div>
                                                 {/* <MDBAvatar
                                                     src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
@@ -120,11 +118,10 @@ export default class HomeScreen extends React.Component {
                                                 <MDBCol md="20" lg="10" className="float-right">
                                                     <h4 className="font-weight-bold mb-3">Martin Kulak</h4>
                                                     <h6 className="font-weight-bold grey-text mb-3">
-                                                        Web Designer
+                                                        <a href="mailto:mkulak@d211.org">Email</a> | 224-653-3407
                                                     </h6>
                                                     <p className="grey-text">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-                                                        eos id officiis hic tenetur.
+                                                        Hello! I teach AP Physics 1!
                                                     </p>
                                                     <a href="#!" className="p-2 fa-lg fb-ic">
                                                         <MDBIcon fab icon="facebook-f" />
@@ -141,7 +138,7 @@ export default class HomeScreen extends React.Component {
 
                                         <MDBCol lg="15" md="15" className="mb-1">
                                             <div className="infoDiv">
-                                                <MDBCol md="2" lg="3" className="float-left">
+                                                <MDBCol md="2" lg="5" className="float-left">
                                                     <div className="teacherImg"></div>
                                                 {/* <MDBAvatar
                                                     src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
@@ -153,11 +150,10 @@ export default class HomeScreen extends React.Component {
                                                 <MDBCol md="20" lg="10" className="float-right">
                                                     <h4 className="font-weight-bold mb-3">Dave Torpe</h4>
                                                     <h6 className="font-weight-bold grey-text mb-3">
-                                                        Web Designer
+                                                        <a href="mailto:dtorpe@d211.org">Email</a> | 224-653-3421
                                                     </h6>
                                                     <p className="grey-text">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-                                                        eos id officiis hic tenetur.
+                                                        Hello! I teach AP Physics 1!
                                                     </p>
                                                     <a href="#!" className="p-2 fa-lg fb-ic">
                                                         <MDBIcon fab icon="facebook-f" />
