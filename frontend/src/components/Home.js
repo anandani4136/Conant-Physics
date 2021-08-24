@@ -40,7 +40,7 @@ export default class HomeScreen extends React.Component {
                             <div className="infoTitle">Contact</div>
                                 <MDBCardBody>
                                     <MDBRow className="text-md-left">
-                                        <MDBCol lg="10" md="12" className="mb-1">
+                                        <MDBCol lg="15" md="15" className="mb-1">
                                             <div className="infoDiv">
                                                 <MDBCol md="2" lg="3" className="float-left">
                                                     <div className="teacherImg"></div>
@@ -51,7 +51,7 @@ export default class HomeScreen extends React.Component {
                                                     alt="Sample avatar"
                                                 /> */}
                                                 </MDBCol>
-                                                <MDBCol md="8" lg="10" className="float-right">
+                                                <MDBCol md="20" lg="10" className="float-right">
                                                     <h4 className="font-weight-bold mb-3">Chris Bruce</h4>
                                                     <h6 className="font-weight-bold grey-text mb-3">
                                                         Web Designer
@@ -73,7 +73,7 @@ export default class HomeScreen extends React.Component {
                                                 </div>
                                         </MDBCol>
 
-                                        <MDBCol lg="10" md="12" className="mb-1">
+                                        <MDBCol lg="15" md="15" className="mb-1">
                                             <div className="infoDiv">
                                                 <MDBCol md="2" lg="3" className="float-left">
                                                     <div className="teacherImg"></div>
@@ -84,7 +84,7 @@ export default class HomeScreen extends React.Component {
                                                     alt="Sample avatar"
                                                 /> */}
                                                 </MDBCol>
-                                                <MDBCol md="8" lg="10" className="float-right">
+                                                <MDBCol md="20" lg="10" className="float-right">
                                                     <h4 className="font-weight-bold mb-3">Caleb Cochrum</h4>
                                                     <h6 className="font-weight-bold grey-text mb-3">
                                                         Web Designer
@@ -106,7 +106,7 @@ export default class HomeScreen extends React.Component {
                                                 </div>
                                         </MDBCol>
 
-                                        <MDBCol lg="10" md="12" className="mb-1">
+                                        <MDBCol lg="15" md="15" className="mb-1">
                                             <div className="infoDiv">
                                                 <MDBCol md="2" lg="3" className="float-left">
                                                     <div className="teacherImg"></div>
@@ -117,7 +117,7 @@ export default class HomeScreen extends React.Component {
                                                     alt="Sample avatar"
                                                 /> */}
                                                 </MDBCol>
-                                                <MDBCol md="8" lg="10" className="float-right">
+                                                <MDBCol md="20" lg="10" className="float-right">
                                                     <h4 className="font-weight-bold mb-3">Martin Kulak</h4>
                                                     <h6 className="font-weight-bold grey-text mb-3">
                                                         Web Designer
@@ -139,7 +139,7 @@ export default class HomeScreen extends React.Component {
                                                 </div>
                                         </MDBCol>
 
-                                        <MDBCol lg="10" md="12" className="mb-1">
+                                        <MDBCol lg="15" md="15" className="mb-1">
                                             <div className="infoDiv">
                                                 <MDBCol md="2" lg="3" className="float-left">
                                                     <div className="teacherImg"></div>
@@ -150,7 +150,7 @@ export default class HomeScreen extends React.Component {
                                                     alt="Sample avatar"
                                                 /> */}
                                                 </MDBCol>
-                                                <MDBCol md="8" lg="10" className="float-right">
+                                                <MDBCol md="20" lg="10" className="float-right">
                                                     <h4 className="font-weight-bold mb-3">Dave Torpe</h4>
                                                     <h6 className="font-weight-bold grey-text mb-3">
                                                         Web Designer
@@ -171,7 +171,6 @@ export default class HomeScreen extends React.Component {
                                                 </MDBCol>
                                                 </div>
                                         </MDBCol>
-
                                         
                                 </MDBRow>
                             </MDBCardBody>
