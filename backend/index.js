@@ -32,10 +32,13 @@ app.post('/', function(req, res) {
     })
 });
 
-app.get('/homepageData', async function (req, res) {
-    const homeRef = db.collection('home');
-
-    const data = await homeRef.get();
+app.get('/homepageData', function (req, res) {
+    db.collection('home').get().then(function(homeRef) {
+        homeRef.forEach(function(teacherDoc) {
+            console.log(teacherDoc.id + " =>" + teacherDoc.data());
+        })
+    })
+    const data = db.collection('home');
     console.log(data)
     return res.json({
         success: true,
