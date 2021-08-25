@@ -33,9 +33,11 @@ app.post('/', function(req, res) {
 });
 
 app.get('/homepageData', function (req, res) {
+    let dataArr = [];
     db.collection('home').get().then(function(homeRef) {
         homeRef.forEach(function(teacherDoc) {
-            console.log(teacherDoc.id + " =>" + teacherDoc.data());
+            // console.log(teacherDoc.id + " =>" + teacherDoc.data());
+            dataArr.push(teacherDoc)
         })
     })
     const data = db.collection('home');
@@ -43,6 +45,7 @@ app.get('/homepageData', function (req, res) {
     return res.json({
         success: true,
         message: data,
+        data: dataArr,
     })
 })
 
