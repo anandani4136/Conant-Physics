@@ -32,9 +32,9 @@ app.post('/', function(req, res) {
     })
 });
 
-app.get('/homepageData', function (req, res) {
-    let dataArr = [];
-    db.collection('home').get().then(function(homeRef) {
+app.get('/homepageData',  async function (req, res) {
+    let dataArr = [0, 1, 2];
+    await db.collection('home').get().then(function(homeRef) {
         homeRef.forEach(function(teacherDoc) {
             // console.log(teacherDoc.id + " =>" + teacherDoc.data());
             dataArr.push(teacherDoc)

@@ -3,6 +3,8 @@ import "./componentsCSS/LoginPageCSS.css"
 import loginInfo from "../static/documents/loginInfo.js"
 import loginCheck from '../static/documents/userAuth.js'
 
+export const LOGGED_IN = false;
+
 export default class LoginPage extends React.Component {
     constructor(props) {
         super(props);
@@ -49,8 +51,8 @@ export default class LoginPage extends React.Component {
 
         if(!correctInfo) {
             alert("STOP TRYING TO HACK CONANT PHYSICS")
-            window.$signedIn = true;
-
+            // window.$signedIn = true;
+            this.LOGGED_IN = false;
         } else {
 
             // const fs = require('fs')
@@ -60,6 +62,7 @@ export default class LoginPage extends React.Component {
             // })
             // set fso = CreateObject()
             window.location.href = window.url + "home"
+            this.LOGGED_IN = true;
 
 
             // alert("BEFORE SETTING IT TO TRUE AFTER LOGIN IT IS " + userAuth.value)
