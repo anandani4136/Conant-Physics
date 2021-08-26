@@ -1,58 +1,66 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./componentsCSS/LoginPageCSS.css"
 import loginInfo from "../static/documents/loginInfo.js"
 import loginCheck from '../static/documents/userAuth.js'
+import { hola } from "../App";
 
-export const LOGGED_IN = false;
+// export const LOGGED_IN = false;
 
-export default class LoginPage extends React.Component {
-    constructor(props) {
-        super(props);
-        // userAuth.userLoggedIn(false);
-        // const fs = require('fs')
-        // fs.readFile("\frontend\src\static\documents\userLoggedIn.txt", "utf-8", (err, data) => {
-        //     if (err) throw (err);
-        //     console.log(data);
-        // })
-        // alert("SDFSDOFISDOFIUSDFOi")
+export default function LoginPage(props) {
 
-        // userAuth.value = false;
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    // constructor(props) {
+    //     super(props);
+    //     // userAuth.userLoggedIn(false);
+    //     // const fs = require('fs')
+    //     // fs.readFile("\frontend\src\static\documents\userLoggedIn.txt", "utf-8", (err, data) => {
+    //     //     if (err) throw (err);
+    //     //     console.log(data);
+    //     // })
+    //     // alert("SDFSDOFISDOFIUSDFOi")
+
+    //     // userAuth.value = false;
 
 
 
-        this.state = {
-            email: "",
-            password: "",
-        }
-    }
+    //     state = {
+    //         email: "",
+    //         password: "",
+    //     }
+    // }
 
-    
+    useEffect(() => {
+        console.log(props)
+    })
 
-    setLoginInfo = e => {
-        // this.setState({
+
+    const setLoginInfo = e => {
+        // setState({
         //     email: document.getElementById("emailInput").value,
         //     password: document.getElementById("pwInput").value});
-        alert(this.state.email + " , " + this.state.password);
+        alert(email + " , " + password);
 
         var correctInfo = true;
         //get the string of email from textfile
-        const emSuf = this.state.email.substring(this.state.email.indexOf("@") + 1);
-        if (emSuf===loginInfo[0]) {
+        const emSuf = email.substring(email.indexOf("@") + 1);
+        if (emSuf === loginInfo[0]) {
             alert("email good")
         } else {
             correctInfo = false;
         }
         //get the password from textfile and check
-        if(this.state.password === loginInfo[1]) {
+        if (password === loginInfo[1]) {
             alert("password good")
         } else {
             correctInfo = false;
         }
 
-        if(!correctInfo) {
+        if (!correctInfo) {
             alert("STOP TRYING TO HACK CONANT PHYSICS")
             // window.$signedIn = true;
-            this.LOGGED_IN = false;
+            props.setLogged()
         } else {
 
             // const fs = require('fs')
@@ -61,9 +69,9 @@ export default class LoginPage extends React.Component {
             //     if (err) throw err;
             // })
             // set fso = CreateObject()
+            props.setLogged()
             window.location.href = window.url + "home"
-            this.LOGGED_IN = true;
-
+            // LOGGED_IN = true;
 
             // alert("BEFORE SETTING IT TO TRUE AFTER LOGIN IT IS " + userAuth.value)
             // userAuth.value = true;
@@ -82,21 +90,20 @@ export default class LoginPage extends React.Component {
     }
 
 
-    // handleChangeValue = e => this.setState({email: e.target.email, password: e.target.password})
-    handleChange = e => {
-        this.setState({ [e.target.name]: e.target.value }, () => {
-            if (this.props.onChange) {
-                this.props.onChange(this.state);
-            }
-        })
-    };
+    // handleChangeValue = e => setState({email: e.target.email, password: e.target.password})
+    const emailHandler = (e) => {
+        setEmail(e.target.value)
+    }
 
-    render() {
+    const passwordHandler = (e) => {
+        setPassword(e.target.value)
+    }
 
 
-        return (
+
+    return (
         <div id="loginPage" >
-            <br/>
+            <br />
             {/*<div>*/}
             {/*</div>*/}
             <div id="loginform">
@@ -112,20 +119,19 @@ export default class LoginPage extends React.Component {
                     {/*<FormInput description="Email" placeholder="Enter your school email" type="text" />*/}
                     <div className="row">
                         <label>Email</label>
-                        <input id="emailInput" name = "email" type="text" placeholder="Enter your school email"  onChange={this.handleChange}/>
+                        <input id="emailInput" name="email" type="text" placeholder="Enter your school email" onChange={emailHandler} value={email}/>
                     </div>
                     {/*<FormInput description="Password" placeholder="Enter your password" type="password"/>*/}
                     <div className="row">
                         <label>Code</label>
-                        <input id="pwInput" name = "password" type="password" placeholder="Enter the code" onChange={this.handleChange}/>
+                        <input id="pwInput" name="password" type="password" placeholder="Enter the code" onChange={passwordHandler} value={password}/>
                     </div>
                     {/*<FormButton title="Log in"/>*/}
                     <div id="button" className="row">
-                        <button onClick={this.setLoginInfo}>Log in</button>
+                        <button onClick={setLoginInfo}>Log in</button>
                     </div>
                 </div>
             </div>
         </div>
-        );
-    }
+    );
 }

@@ -1,31 +1,39 @@
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import LoginPage from "./components/LoginPage";
 import HomeScreen from "./components/HomeScreen";
 import Resources from "./components/Resources";
-import { LOGGED_IN } from "./components/LoginPage";
+// import { LOGGED_IN } from "./components/LoginPage";
 
 
 window.url = "http://localhost:3000/"
 
-const PublicRoute = ({component: Component, restricted}) => {
+
+const PublicRoute = ({component: Component, restricted, isLogged}) => {
     return (
         <Route render={props => (
-            LOGGED_IN && restricted ? <Redirect to="/" /> : <Component /> 
+            isLogged && restricted ? <Redirect to="/" /> : <Component /> 
         )} />
     )
 }
 
-const PrivateRoute = ({component: Component}) => {
-    <Route render={props => (
-        LOGGED_IN ?
+const PrivateRoute = ({component: Component, path, isLogged}) => {
+    return (
+        <Route path={path} render={props => (
+        isLogged ?
             <Component />
         : <Redirect to="/" />
     )} />
+    )
 }
 
 function App() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+    const changeLog = () => {
+        setIsLoggedIn(false)
+    }
   return (
       <main>
 
@@ -34,9 +42,10 @@ function App() {
                   {/* <Route path = "/" exact component = {() => <LoginPage/>}/>
                   <Route path = "/home" exact component = {() => <HomeScreen/>}/>
                   <Route path = "/resources" exact component = {() =><Resources/>}/> */}
-                  <PublicRoute restricted = {false} component={LoginPage} path = "/" exact />
-                  <PublicRoute restricted = {true} component={HomeScreen} path = "/home" exact />
-                  <PublicRoute restricted = {true} component={Resources} path = "/resources" exact />
+                  <PrivateRoute component={HomeScreen} isLogged={isLoggedIn} path = "/home"  />
+                  <PrivateRoute component={Resources} isLogged={isLoggedIn} path = "/resources"  />
+                  <PublicRoute restricted = {false} isLogged={isLoggedIn} setLogged={() => changeLog()} component={LoginPage} exact path = "/"  />
+                  
 
               </Switch>
           </BrowserRouter>

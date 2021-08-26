@@ -12,8 +12,6 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
-
-
 app.get('/', function(req, res) {
 
     return res.json({
