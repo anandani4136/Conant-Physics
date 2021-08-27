@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import "./componentsCSS/LoginPageCSS.css"
 import loginInfo from "../static/documents/loginInfo.js"
 import loginCheck from '../static/documents/userAuth.js'
-import { hola } from "../App";
+import { hola, setIsLoggedIn } from "../App";
 
 // export const LOGGED_IN = false;
 
@@ -60,7 +60,7 @@ export default function LoginPage(props) {
         if (!correctInfo) {
             alert("STOP TRYING TO HACK CONANT PHYSICS")
             // window.$signedIn = true;
-            props.setLogged()
+            setIsLoggedIn()
         } else {
 
             // const fs = require('fs')
@@ -69,7 +69,7 @@ export default function LoginPage(props) {
             //     if (err) throw err;
             // })
             // set fso = CreateObject()
-            props.setLogged()
+            setIsLoggedIn()
             window.location.href = window.url + "home"
             // LOGGED_IN = true;
 
