@@ -31,20 +31,58 @@ app.post('/', function(req, res) {
 });
 
 app.get('/homepageData',  async function (req, res) {
-    let dataArr = [0, 1, 2];
+    let dataArr = [];
+    try {
     await db.collection('home').get().then(function(homeRef) {
-        homeRef.forEach(function(teacherDoc) {
+        homeRef.forEach((teacherDoc) => {
             // console.log(teacherDoc.id + " =>" + teacherDoc.data());
-            dataArr.push(teacherDoc)
+            // dataArr.push(teacherDoc)
+            console.log(teacherDoc)
+            dataArr.push( {
+                Name: teacherDoc.data().Name,
+                Description: teacherDoc.data().Description,
+                Email: teacherDoc.data().Email,
+            })
         })
     })
-    const data = db.collection('home');
-    console.log(data)
     return res.json({
         success: true,
-        message: data,
         data: dataArr,
-    })
+    }) }
+    catch(e) {
+        return res.json({
+            success: false,
+            error: e,
+        })
+    }
 })
+
+
+app.get('/resourcesData',  async function (req, res) {
+    let dataArr = [];
+    try {
+    await db.collection('resources').get().then(function(resRef) {
+        resRef.forEach(function(resourceDoc) {
+            // console.log(teacherDoc.id + " =>" + teacherDoc.data());
+            // dataArr.push(teacherDoc)
+            dataArr.push( {
+                Name: resourceDoc.data().Name,
+                Image: resourceDoc.data().Image,
+                Link: resourceDoc.data().Link,
+            })
+        })
+    })
+    return res.json({
+        success: true,
+        data: dataArr,
+    }) }
+    catch(e) {
+        return res.json({
+            success: false,
+            error: e
+        })
+    }
+})
+
 
 app.listen(5000, ()=> console.log("ConantPhysics listening on port 5000!"));
