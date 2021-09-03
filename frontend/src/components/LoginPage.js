@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import "./componentsCSS/LoginPageCSS.css"
 import loginInfo from "../static/documents/loginInfo.js"
 import loginCheck from '../static/documents/userAuth.js'
-import { hola } from "../App";
+import {backendReq } from "./BackendRequest.js"
 
 // export const LOGGED_IN = false;
 
@@ -35,7 +35,7 @@ export default function LoginPage(props) {
         console.log(props)
     })
 
-
+    let resourceReq = "";
     const setLoginInfo = e => {
         // setState({
         //     email: document.getElementById("emailInput").value,
@@ -69,6 +69,9 @@ export default function LoginPage(props) {
             //     if (err) throw err;
             // })
             // set fso = CreateObject()
+            resourceReq = backendReq("GET", "/resourcesData", "", (response)=>{console.log(response)})
+            alert(resourcesReq)
+
             localStorage.setItem('loggedIn', true)
 
             window.location.href = window.url + "home"
