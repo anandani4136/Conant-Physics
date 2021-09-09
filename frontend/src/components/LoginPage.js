@@ -40,19 +40,19 @@ export default function LoginPage(props) {
         // setState({
         //     email: document.getElementById("emailInput").value,
         //     password: document.getElementById("pwInput").value});
-        alert(email + " , " + password);
+        // alert(email + " , " + password);
 
         var correctInfo = true;
         //get the string of email from textfile
         const emSuf = email.substring(email.indexOf("@") + 1);
         if (emSuf === loginInfo[0]) {
-            alert("email good")
+            // alert("email good")
         } else {
             correctInfo = false;
         }
         //get the password from textfile and check
         if (password === loginInfo[1]) {
-            alert("password good")
+            // alert("password good")
         } else {
             correctInfo = false;
         }
@@ -69,12 +69,18 @@ export default function LoginPage(props) {
             //     if (err) throw err;
             // })
             // set fso = CreateObject()
-            resourceReq = backendReq("GET", "/resourcesData", "", (response)=>{console.log(response)})
-            alert(resourcesReq)
+            resourceReq = backendReq("GET", "/resourcesData", (res)=> {
+                console.log(res)
+                alert('callback function called')
+            })
+            alert('called backendReq')
+            alert("resourceReq = " + resourceReq)
 
             localStorage.setItem('loggedIn', true)
 
-            window.location.href = window.url + "home"
+            // window.location.href = window.url + "home"
+
+
             // LOGGED_IN = true;
 
             // alert("BEFORE SETTING IT TO TRUE AFTER LOGIN IT IS " + userAuth.value)

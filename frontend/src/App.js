@@ -24,7 +24,7 @@ const PublicRoute = ({component: Component, restricted, changeLogFunc}) => {
 }
 
 const PrivateRoute = ({component: Component, path}) => {
-    console.log(localStorage.getItem('loggedIn'))
+    // console.log(localStorage.getItem('loggedIn'))
     return (
         <Route path={path} render={props => (
         localStorage.getItem('loggedIn')?
